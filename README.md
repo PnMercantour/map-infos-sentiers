@@ -1,6 +1,6 @@
-# Carte "Infos Sentiers" — media.mercantour.eu/map_infos_sentiers
+# Carte "Infos Sentiers" - media.mercantour.eu/map_infos_sentiers
 
-Documentation interne (développeur / administrateur serveur) de la carte 3D MapLibre publiée sur `media.mercantour.eu/map_infos_sentiers`.
+Documentation de la carte 3D MapLibre publiée sur `media.mercantour.eu/map_infos_sentiers`.
 
 ## Vue d'ensemble
 
@@ -40,9 +40,9 @@ Chaque couche a sa propre chaîne d'alimentation, décrite ci-dessous.
   - `SELECT * FROM sentier.troncons_geotrek WHERE etat IS NOT NULL` → `/var/www/html/map_infos_sentiers/sentiers.geojson`
   - `SELECT * FROM sentier.t_infos_sentiers_ponctuel` → `/var/www/html/map_infos_sentiers/infos_sentiers_ponctuel.geojson`
 
-### ⚠️ Point de vigilance — Maintenance
+### ⚠️ Point de vigilance - Maintenance
 
-**Le certificat d'accès à la base de données (bd_pnm) doit être renouvelé tous les 2 ans.** Sans renouvellement, le script `export_map_infos_from_bd_pnm.py` ne peut plus se connecter et les GeoJSON ne sont plus rafraîchis (silencieusement — aucune erreur visible côté carte, les données deviennent simplement obsolètes). À ajouter à un calendrier de maintenance / suivi.
+**Le certificat d'accès à la base de données (bd_pnm) doit être renouvelé tous les 2 ans.** Sans renouvellement, le script `export_map_infos_from_bd_pnm.py` ne peut plus se connecter et les GeoJSON ne sont plus rafraîchis (silencieusement - aucune erreur visible côté carte, les données deviennent simplement obsolètes). À ajouter à un calendrier de maintenance / suivi.
 
 ---
 
