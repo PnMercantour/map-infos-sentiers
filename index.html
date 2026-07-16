@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Carte 3D</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
+
+    <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/pmtiles@latest/dist/pmtiles.js"></script>
+
+    <style>
+        @import url('style.css');
+    </style>
+</head>
+
+
+
+<body>
+
+    <div id="map"></div>
+
+    <details id="menu" open>
+        <summary class="menu-summary">Options</summary>
+
+        <div id="menu-content">
+            <label for="basemapSelect">
+                Fond de carte
+                <select id="basemapSelect">
+                    <option value="osm" selected>Plan IGN</option>
+                    <option value="ortho">Orthophoto IGN</option>
+                </select>
+            </label>
+
+            <hr>
+
+            <label>
+                <input type="checkbox" checked id="zonesCheck">
+                Coeur du Parc national du Mercantour
+            </label>
+
+            <label>
+                <input type="checkbox" checked id="neigeCheck">
+                Neige
+            </label>
+
+            <label>
+                <input type="checkbox" checked id="sentiersCheck">
+                Sentiers
+            </label>
+
+            <label>
+                <input type="checkbox" checked id="trekCheck">
+                Grande traversée du Mercantour
+            </label>
+
+            <hr>
+
+            <div id="legend">
+                <b>Légende</b>
+                <div id="legend-content"></div>
+            </div>
+        </div>
+    </details>
+
+    <script src="map.js"></script>
+
+</body>
+
+</html>
