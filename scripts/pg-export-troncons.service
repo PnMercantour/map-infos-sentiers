@@ -1,0 +1,14 @@
+# /etc/systemd/system/pg-export-troncons.service
+[Unit]
+Description=PostgreSQL export listener map infos sentiers
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=postgres
+ExecStart=/usr/bin/python3 /home/map-infos-sentiers-data/export_map_infos_from_bd_pnm.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
